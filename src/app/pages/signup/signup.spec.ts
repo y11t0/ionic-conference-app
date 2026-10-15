@@ -37,7 +37,7 @@ describe('SignupPage', () => {
     );
 
     expect(getInputs().length).toBe(2);
-    expect(getInputs().some((input) => input.classList.contains('ng-touched'))).toBeFalse();
+    expect(getInputs().some(input => input.classList.contains('ng-touched'))).toBeFalse();
 
     submit.click();
     fixture.detectChanges();
