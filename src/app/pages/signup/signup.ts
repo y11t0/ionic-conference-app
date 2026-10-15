@@ -49,6 +49,8 @@ export class SignupPage {
     if (form.valid) {
       this.userService.signup(this.signup.username);
       this.router.navigateByUrl('/app/tabs/schedule');
+    } else {
+      form.control.markAllAsTouched();
     }
   }
 }

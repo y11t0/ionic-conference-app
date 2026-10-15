@@ -48,6 +48,8 @@ export class LoginPage {
     if (form.valid) {
       this.user.login(this.login.username);
       this.router.navigateByUrl('/app/tabs/schedule');
+    } else {
+      form.control.markAllAsTouched();
     }
   }
 
